@@ -1,5 +1,5 @@
 # Bing Wallpapers For Linux
-This enables bing wallpaper on linux, specifically debian based distros.
+This enables bing wallpaper on linux, specifically debian with TDE.
 
 ## Supported Desktop Environments
 
