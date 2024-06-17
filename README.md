@@ -1,5 +1,6 @@
-# Bing Wallpapers For Linux
-This enables bing wallpaper on linux, specifically debian with TDE.
+# Bing Wallpapers For Trinity DE
+This enables bing wallpaper on debian with Trinity DE.
+forked from : https://github.com/whizzzkid/bing-wallpapers-for-linux
 
 ## Supported Desktop Environments
 
