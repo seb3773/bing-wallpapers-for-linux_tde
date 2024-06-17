@@ -94,30 +94,11 @@ do
   # Writing copyright.
   echo "$copyright" > $path${imgName/%.jpg/.txt}
   
-  if [ "$XDG_CURRENT_DESKTOP" = "XFCE" ]
-  then
-    xres=($(echo $(xfconf-query --channel xfce4-desktop --list | grep last-image)))
-    for x in "${xres[@]}"
-    do
-      xfconf-query --channel xfce4-desktop --property $x --set $path$imgName
-    done
-  elif [ "$XDG_CURRENT_DESKTOP" = "i3" ]
-  then
-    feh --bg-scale $path$imgName
-  elif [ "$XDG_CURRENT_DESKTOP" = "MATE" ]
-  then
-    gsettings set org.mate.background picture-filename $path$imgName
-  # Set the wallpaper for unity, gnome3, cinnamon.
-  elif gsettings set org.gnome.desktop.background picture-uri "file://$path$imgName"; then
-    #Logging
-    # Set the view to zoom,
-    gsettings set org.gnome.desktop.background picture-options "zoom"
-  else
-    echo "$XDG_CURRENT_DESKTOP not supported."
-    break
-  fi
 
-  echo "New wallpaper set successfully for $XDG_CURRENT_DESKTOP."
+dcop kdesktop KBackgroundIface setWallpaper "$path$imgName"
+ 
+
+  echo "New wallpaper set successfully."
   
   # If -1 option was passed just run once
   if [ $run_once == true ];then
