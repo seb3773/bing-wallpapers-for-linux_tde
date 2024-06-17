@@ -95,7 +95,7 @@ do
   echo "$copyright" > $path${imgName/%.jpg/.txt}
   
 
-dcop kdesktop KBackgroundIface setWallpaper "$path$imgName"
+dcop kdesktop KBackgroundIface setWallpaper "$path$imgName" 6
  
 
   echo "New wallpaper set successfully."
