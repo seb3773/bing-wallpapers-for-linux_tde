@@ -10,6 +10,7 @@ You can put the script anywhere, but I recommend the folder /usr/local/bin so it
   
 ## Settings
 You can set the check interval in daemon/cronjob mode (-i); don't forget the image is renewed only once a day, so depending of your usage it's maybe not usefull to set a too short interval.  
+You can set the image size to be downloaded (-s) between 4 available resolutions provided by the bing images api (800x600, 1366x768, 1920x1080, 1920x1200)  
 You can specify too the folder where images will be downloaded (-f); if it doesn't exist yet, it will be created if possible.  
   
   
