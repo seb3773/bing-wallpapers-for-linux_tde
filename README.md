@@ -1,36 +1,33 @@
 # Bing Wallpapers For Trinity DE
 This enables bing wallpaper on debian with Trinity DE.  
-forked from : https://github.com/whizzzkid/bing-wallpapers-for-linux
+forked (& improved) from : https://github.com/whizzzkid/bing-wallpapers-for-linux
 
 ## Supported Desktop Environments
 
 - Trinity DE
 
-Just download or clone this repo. I suggest to put the bingwallpaper.sh script in /usr/local/bin/
+## Description
+bingwallpaper.sh is a simple script that retrieve 'Bing image of the day' and set it as current wallpaper. It is designed for Trinity DE.  
+You can run it 'singleshot' by just executing the script without arguments, run it as a daemon (-d), or add it to cron jobs (-c).  
+  
+You can put the script anywhere, but I recommend the folder /usr/local/bin so it will be available for all users as a direct command.  
+  
+## Settings
+You can set the check interval in daemon/cronjob mode (-i); don't forget the image is renewed only once a day, so depending of your usage it's maybe not usefull to set a too short interval.  
+You can specify too the folder where images will be downloaded (-f); if it doesn't exist yet, it will be created if possible.  
+    
+  
+Usage:
+ "bingwallpaper.sh"       run and exit
+ "bingwallpaper.sh -d"    run as daemon
+ "bingwallpaper.sh -k"    kill daemon
+ "bingwallpaper.sh -c"    add task to cron
+ "bingwallpaper.sh -r"    remove task from cron
+ "bingwallpaper.sh -i"    set check interval
+ "bingwallpaper.sh -f"    set wallpapers download folder
+ "bingwallpaper.sh -p"    display status/settings
+ "bingwallpaper.sh -h"    help
+  
+  
++-----------------------+
 
-Then run:
-
-    $ bingwallpaper.sh
-
-But this would keep on running as we check every 3 hours for new wallpaper. So it's better to do it this way:
-
-    $ bingwallpaper.sh &>/dev/null &
-
-## Run Once
-To update the wallpaper only once (Instead of checking every 3 hours), Run:
-
-    $ bingwallpaper.sh -1
-
-## Setting Up Cron
-To setup regular checks for new wallapers, edit crontab for the current user, using:
-
-    $ crontab -u $USER -e
-
-, and add this line:
-
-    0 */6 * * * bingwallpaper.sh -1 > /dev/null 2>&1
-
-This will run every 6 hours. You can use [this link](http://www.crontab-generator.org/) for reference.
-
-## License
-GPLv2
