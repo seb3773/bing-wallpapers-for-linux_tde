@@ -3,7 +3,7 @@ This enables bing wallpapers on debian with Trinity DE.
 forked (& improved) from : https://github.com/whizzzkid/bing-wallpapers-for-linux
 
 ## Description
-bingwallpaper.sh is a simple script that retrieve 'Bing image of the day' and set it as current wallpaper. It is designed for Trinity DE.  
+bingwallpaper.sh is a simple script that retrieves 'Bing image of the day' and set it as current wallpaper. It is designed for Trinity DE.  
 You can run it 'singleshot' by just executing the script without arguments, run it as a daemon (-d), or add it to cron jobs (-c).  
   
 You can put the script anywhere, but I recommend the folder /usr/local/bin so it will be available for all users as a direct command.  
@@ -21,6 +21,7 @@ Usage:
  "bingwallpaper.sh -r"    remove task from cron  
  "bingwallpaper.sh -i"    set check interval  
  "bingwallpaper.sh -f"    set wallpapers download folder  
+ "bingwallpaper.sh -s"    set image size  
  "bingwallpaper.sh -p"    display status/settings  
  "bingwallpaper.sh -h"    help  
   
