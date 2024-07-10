@@ -1,5 +1,5 @@
 # Bing Wallpapers For Trinity DE
-This enables bing wallpapers on debian with Trinity DE.  
+This enables bing 'wallpaper of the day' on debian with Trinity DE.  
 forked (& improved) from : https://github.com/whizzzkid/bing-wallpapers-for-linux
 
 ## Description
